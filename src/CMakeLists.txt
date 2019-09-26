@@ -1,15 +1,8 @@
-make_executable()
-
-
-include_directories(
-    ${GLM_INCLUDE_DIR}
-    ${OPENGL_INCLUDE_DIR}
-    ${GLFW_INCLUDE_DIR}
-    ${IMGUI_INCLUDE_DIR}
+set(SRCS
+    main.cpp
     )
     
-target_link_libraries(${PROJECT}
-    ${OPENGL_LIBRARIES}
-    ${GLFW_LIBRARIES}
-    ${IMGUI_LIBRARIES}
-    )
+# Notre exécutable
+add_executable(main ${SRCS})
+
+target_link_libraries(main imgui glm glfw)
