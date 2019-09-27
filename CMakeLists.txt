@@ -27,7 +27,8 @@ file(GLOB_RECURSE HEADERS
 	src/*.hpp
 )
 
+
 add_executable(template ${HEADERS} ${SRCS})
 
-target_link_libraries(template glfw glm_shared)
+target_link_libraries(template glfw glm_static)
 

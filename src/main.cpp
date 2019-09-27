@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <GLFW/glfw3.h>
+#include <glfw.h>
 #include "Class/Hello.h"
-// #include <glm_shared>
+// #include <glm/vec3>
 
 static void error_callback(int error, const char* description)
 {
