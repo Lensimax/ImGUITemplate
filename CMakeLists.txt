@@ -3,6 +3,12 @@ cmake_minimum_required(VERSION 2.8)
 
 set(APP_TARGET imgui-template)
 
+# affectation des variables pour les includes
+set(GLM_INCLUDE_DIR thirdparty/glm)
+set(GLFW_INCLUDE_DIR thirdparty/glfw/include)
+set(GLFW_INCLUDE_DIR thirdparty/imgui)
+set(GL3W_INCLUDE_DIR thirdparty/gl3w)
+
 # 3rd party libraries
 add_subdirectory(thirdparty)
 
@@ -25,10 +31,7 @@ file(GLOB_RECURSE HEADERS
 )
 
 
-# affectation des variables pour les includes
-set(GLM_INCLUDE_DIR thirdparty/glm)
-set(GLFW_INCLUDE_DIR thirdparty/glfw/include)
-set(GLFW_INCLUDE_DIR thirdparty/imgui)
+
 
 
 
@@ -38,7 +41,8 @@ add_executable(template ${HEADERS} ${SRCS})
 include_directories(
         ${GLM_INCLUDE_DIR}
         ${GLFW_INCLUDE_DIR}
+        ${GL3W_INCLUDE_DIR}
 )
 
-target_link_libraries(template glfw glm_static imgui)
+target_link_libraries(template glfw glm_static glew imgui)
 
