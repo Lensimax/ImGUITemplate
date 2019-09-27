@@ -12,4 +12,7 @@ file(GLOB_RECURSE HEADERS_IMGUI
 )
 
 
-add_library(imgui STATIC ${SRCS_IMGUI} ${imgui_headers})
+
+add_library(imgui STATIC ${SRCS_IMGUI} ${HEADERS_IMGUI} )
+
+
