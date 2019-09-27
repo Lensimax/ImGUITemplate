@@ -6,7 +6,7 @@ set(APP_TARGET imgui-template)
 # 3rd party libraries
 add_subdirectory(thirdparty)
 
-#find_package(ImGui)
+#find_package(imgui)
 #find_package(glm)
 #find_package(glfw)
 
@@ -27,7 +27,8 @@ file(GLOB_RECURSE HEADERS
 
 # affectation des variables pour les includes
 set(GLM_INCLUDE_DIR thirdparty/glm)
-set(GLFW_INCLUDE_DIR thirdparty/glfw/include)
+set(GLFW_INCLUDE_DIR thirdparty/glfw)
+set(GLFW_INCLUDE_DIR thirdparty/imgui)
 
 
 
@@ -38,5 +39,5 @@ include_directories(
         ${GLM_INCLUDE_DIR}
         ${GLFW_INCLUDE_DIR})
 
-target_link_libraries(template glfw glm_static)
+target_link_libraries(template glfw glm_static imgui)
 
