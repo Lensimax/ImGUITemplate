@@ -12,5 +12,11 @@ add_subdirectory(thirdparty)
 
 
 # projects
-add_subdirectory(src)
+set(SRCS
+    src/test.cpp
+)
+
+add_executable(template ${SRCS})
+
+target_link_libraries(template glfw)
 

@@ -23,5 +23,11 @@ int main(int argc, char const *argv[])
 	GLFWwindow* window = glfwCreateWindow(1280, 720, "ImGui OpenGL3 example", NULL, NULL);
     glfwMakeContextCurrent(window);
 
+    while (!glfwWindowShouldClose(window)){
+    	glfwPollEvents();
+    }
+
+	glfwTerminate();
+
 	return 0;
 }
