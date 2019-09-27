@@ -16,7 +16,7 @@ script:
   - make -j
 
 
-after_script:
+after_success:
   - echo "SUCESS !!!"
 
 after_failure:
