@@ -12,11 +12,22 @@ add_subdirectory(thirdparty)
 
 
 # projects
-set(SRCS
-    src/test.cpp
+#set(SRCS
+#    src/test.cpp
+#)
+
+file(GLOB_RECURSE SRCS 
+	src/*.c
+	src/*.cpp
 )
 
-add_executable(template ${SRCS})
 
-target_link_libraries(template glfw)
+file(GLOB_RECURSE HEADERS 
+	src/*.h
+	src/*.hpp
+)
+
+add_executable(template ${HEADERS} ${SRCS})
+
+target_link_libraries(template glfw glm_shared)
 
