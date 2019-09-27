@@ -11,31 +11,29 @@ add_subdirectory(thirdparty)
 #find_package(glfw)
 
 
-# projects
-#set(SRCS
-#    src/test.cpp
-#)
 
+# SRCS prends la valeur des sources 
 file(GLOB_RECURSE SRCS 
 	src/*.c
 	src/*.cpp
 )
 
-
+# SRCS prends la valeur des headers 
 file(GLOB_RECURSE HEADERS 
 	src/*.h
 	src/*.hpp
 )
 
 
-
+# affectation des variables pour les includes
 set(GLM_INCLUDE_DIR thirdparty/glm)
-set(GLFW_INCLUDE_DIR thirdparty/glfw)
+set(GLFW_INCLUDE_DIR thirdparty/glfw/include)
 
 
 
-add_executable(template ${HEADERS} ${SRCS} )
+add_executable(template ${HEADERS} ${SRCS})
 
+# ajout des includes directory
 include_directories(
         ${GLM_INCLUDE_DIR}
         ${GLFW_INCLUDE_DIR})
