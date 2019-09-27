@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <glfw.h>
+#include <GLFW/glfw3.h>
 #include "Class/Hello.h"
-// #include <glm/vec3>
+#include <glm/vec3.hpp>
 
 static void error_callback(int error, const char* description)
 {
@@ -11,6 +11,9 @@ static void error_callback(int error, const char* description)
 
 int main(int argc, char const *argv[])
 {
+    glm::vec3 vec = glm::vec3(1,0,0);
+    printf("{%f, %f, %f}\n", vec[0], vec[1], vec[2]);
+
 	Hello *h = new Hello();
 	h->print(); 
 

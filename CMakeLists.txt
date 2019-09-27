@@ -28,7 +28,17 @@ file(GLOB_RECURSE HEADERS
 )
 
 
-add_executable(template ${HEADERS} ${SRCS})
+
+set(GLM_INCLUDE_DIR thirdparty/glm)
+set(GLFW_INCLUDE_DIR thirdparty/glfw)
+
+
+
+add_executable(template ${HEADERS} ${SRCS} )
+
+include_directories(
+        ${GLM_INCLUDE_DIR}
+        ${GLFW_INCLUDE_DIR})
 
 target_link_libraries(template glfw glm_static)
 
