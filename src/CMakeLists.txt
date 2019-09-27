@@ -1,8 +1,8 @@
 set(SRCS
-    main.cpp
+    test.cpp
     )
     
 # Notre exécutable
-add_executable(main ${SRCS})
+add_executable(template ${SRCS})
 
-target_link_libraries(main imgui glm glfw)
+target_link_libraries(template glfw)
