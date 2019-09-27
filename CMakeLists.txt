@@ -7,7 +7,7 @@ set(APP_TARGET imgui-template)
 set(GLM_INCLUDE_DIR thirdparty/glm)
 set(GLFW_INCLUDE_DIR thirdparty/glfw/include)
 set(GLFW_INCLUDE_DIR thirdparty/imgui)
-set(GL3W_INCLUDE_DIR thirdparty/gl3w)
+set(GL3W_INCLUDE_DIR thirdparty/glad)
 
 # 3rd party libraries
 add_subdirectory(thirdparty)
@@ -44,5 +44,5 @@ include_directories(
         ${GL3W_INCLUDE_DIR}
 )
 
-target_link_libraries(template glfw glm_static glew imgui)
+target_link_libraries(template glfw glm_static glad imgui)
 
