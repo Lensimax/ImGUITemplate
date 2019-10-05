@@ -2,6 +2,7 @@
 #include <GLFW/glfw3.h>
 #include "Class/Hello.h"
 #include <glm/vec3.hpp>
+#include <glad/glad.h>
 
 static void error_callback(int error, const char* description)
 {
@@ -15,7 +16,7 @@ int main(int argc, char const *argv[])
     printf("{%f, %f, %f}\n", vec[0], vec[1], vec[2]);
 
 	Hello *h = new Hello();
-	h->print(); 
+	h->print();
 
 	glfwSetErrorCallback(error_callback);
     if (!glfwInit())

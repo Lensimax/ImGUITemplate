@@ -7,7 +7,7 @@ set(APP_TARGET imgui-template)
 set(GLM_INCLUDE_DIR thirdparty/glm)
 set(GLFW_INCLUDE_DIR thirdparty/glfw/include)
 set(IMGUI_INCLUDE_DIR thirdparty/imgui)
-set(GLAD_INCLUDE_DIR thirdparty/glad)
+#set(GLAD_INCLUDE_DIR thirdparty/glad/include)
 
 # 3rd party libraries
 add_subdirectory(thirdparty)
@@ -18,14 +18,14 @@ add_subdirectory(thirdparty)
 
 
 
-# SRCS prends la valeur des sources 
-file(GLOB_RECURSE SRCS 
+# SRCS prends la valeur des sources
+file(GLOB_RECURSE SRCS
 	src/*.c
 	src/*.cpp
 )
 
-# SRCS prends la valeur des headers 
-file(GLOB_RECURSE HEADERS 
+# SRCS prends la valeur des headers
+file(GLOB_RECURSE HEADERS
 	src/*.h
 	src/*.hpp
 )
@@ -50,4 +50,3 @@ include_directories(
 )
 
 target_link_libraries(template glfw glm_static glad imgui ${OPENGL_LIBRARIES})
-
