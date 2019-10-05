@@ -7,7 +7,7 @@ set(APP_TARGET imgui-template)
 set(GLM_INCLUDE_DIR thirdparty/glm)
 set(GLFW_INCLUDE_DIR thirdparty/glfw/include)
 set(IMGUI_INCLUDE_DIR thirdparty/imgui)
-#set(GLAD_INCLUDE_DIR thirdparty/glad/include)
+set(GLAD_INCLUDE_DIR thirdparty/glad/include)
 
 # 3rd party libraries
 add_subdirectory(thirdparty)
