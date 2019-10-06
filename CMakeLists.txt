@@ -50,4 +50,4 @@ include_directories(
         ${OPENGL_INCLUDE_DIR}
 )
 
-target_link_libraries(template glfw glm_static gl3w imgui)
+target_link_libraries(template glfw glm_static gl3w imgui ${CMAKE_DL_LIBS})
