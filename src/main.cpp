@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include "Class/Hello.h"
 #include <glm/vec3.hpp>
-#include <GL/gl3w.h>
+#include <glad/glad.h>
 
 static void error_callback(int error, const char* description)
 {

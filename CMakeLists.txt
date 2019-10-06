@@ -7,7 +7,7 @@ set(APP_TARGET imgui-template)
 set(GLM_INCLUDE_DIR thirdparty/glm)
 set(GLFW_INCLUDE_DIR thirdparty/glfw/include)
 set(IMGUI_INCLUDE_DIR thirdparty/imgui)
-set(GL3W_INCLUDE_DIR thirdparty/gl3w)
+set(GLAD_INCLUDE_DIR thirdparty/glad/include)
 
 # 3rd party libraries
 add_subdirectory(thirdparty)
@@ -33,7 +33,7 @@ file(GLOB_RECURSE HEADERS
 add_definitions( -ldl )
 
 
-add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GL3W)
+add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLAD)
 add_definitions(-DGLFW_INCLUDE_NONE)
 
 
@@ -45,9 +45,9 @@ add_executable(template ${HEADERS} ${SRCS})
 include_directories(
         ${GLM_INCLUDE_DIR}
         ${GLFW_INCLUDE_DIR}
-        ${GL3W_INCLUDE_DIR}
+        ${GLAD_INCLUDE_DIR}
         ${IMGUI_INCLUDE_DIR}
         ${OPENGL_INCLUDE_DIR}
 )
 
-target_link_libraries(template glfw glm_static gl3w imgui ${CMAKE_DL_LIBS})
+target_link_libraries(template glfw glm_static glad imgui ${CMAKE_DL_LIBS})
