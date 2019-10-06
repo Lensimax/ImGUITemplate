@@ -1,9 +1,9 @@
 add_subdirectory(glm)
 add_subdirectory(glfw)
 
-file(GLOB GL3W_SOURCES gl3w/GL/glad.c)
+file(GLOB GL3W_SOURCES gl3w/GL/gl3w.c)
 file(GLOB GL3W_HEADERS gl3w/GL/*.h)
-set(GL3W_INCLUDE gl3w)
+set(GL3W_INCLUDE gl3w/)
 
 include_directories(${GL3W_INCLUDE})
 

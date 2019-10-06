@@ -30,9 +30,10 @@ file(GLOB_RECURSE HEADERS
 	src/*.hpp
 )
 
+add_definitions( -ldl )
 
 
-add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLAD)
+add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GL3W)
 add_definitions(-DGLFW_INCLUDE_NONE)
 
 
@@ -49,4 +50,4 @@ include_directories(
         ${OPENGL_INCLUDE_DIR}
 )
 
-target_link_libraries(template glfw glm_static gl3w imgui ${OPENGL_LIBRARIES})
+target_link_libraries(template glfw glm_static gl3w imgui)
