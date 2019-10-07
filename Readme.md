@@ -1,7 +1,9 @@
 # ImGUI - Template With OpenGL - GLFW - GLAD - GLM
 <p>
-[![Build Status](https://travis-ci.org/TheSpyGeek/ImGUITemplate.svg?branch=master)](https://travis-ci.org/TheSpyGeek/ImGUITemplate)
-![Imgui version](https://img.shields.io/badge/ImGui Version-1.73-blue)
+    <a href="https://travis-ci.org/TheSpyGeek/ImGUITemplate" alt="Build Status">
+    <img src="https://travis-ci.org/TheSpyGeek/ImGUITemplate.svg?branch=master" /></a>
+    <a alt="ImGui Version">
+    <img src="https://img.shields.io/badge/ImGui Version-1.73-blue" /></a>
 </p>
 
 ### How to clone
