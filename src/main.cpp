@@ -3,9 +3,11 @@
 // (GLFW is a cross-platform general purpose library for handling windows, inputs, OpenGL/Vulkan graphics context creation, etc.)
 
 #include <imgui.h>
-#include <imgui_impl_glfw.h>
-#include <imgui_impl_opengl3.h>
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
 #include <stdio.h>
+#include "Class/Hello.h"
+#include <glm/vec3.hpp>
 
 // About Desktop OpenGL function loaders:
 //  Modern desktop OpenGL doesn't have a standard portable header file to load OpenGL function pointers.
@@ -117,6 +119,11 @@ int main(int, char**)
     bool show_demo_window = true;
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
+    Hello *h = new Hello();
+    h->print();
+
+    glm::vec3 v = glm::vec3(1,2,3);
 
     // Main loop
     while (!glfwWindowShouldClose(window))
