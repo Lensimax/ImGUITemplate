@@ -1,7 +1,11 @@
-project(TemplateImGui)
+set(PROJECT_NAME imgui-template)
+
+
+project(${PROJECT_NAME})
+
+
 cmake_minimum_required(VERSION 2.8)
 
-set(APP_TARGET imgui-template)
 
 # affectation des variables pour les includes
 set(GLM_INCLUDE_DIR thirdparty/glm)
@@ -39,7 +43,7 @@ add_definitions(-DGLFW_INCLUDE_NONE)
 
 
 
-add_executable(template ${HEADERS} ${SRCS})
+add_executable(${PROJECT_NAME} ${HEADERS} ${SRCS})
 
 # ajout des includes directory
 include_directories(
@@ -50,4 +54,4 @@ include_directories(
         ${OPENGL_INCLUDE_DIR}
 )
 
-target_link_libraries(template glfw glm_static glad imgui ${CMAKE_DL_LIBS})
+target_link_libraries(${PROJECT_NAME} glfw glm_static glad imgui ${CMAKE_DL_LIBS})
