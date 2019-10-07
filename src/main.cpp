@@ -6,7 +6,6 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include <stdio.h>
-#include "Class/Hello.h"
 #include <glm/vec3.hpp>
 
 // About Desktop OpenGL function loaders:
