@@ -35,8 +35,10 @@ private:
 
     void createCubeVAO();
     void deleteCubeVAO();
+    void drawCube();
 
     glm::vec3 cubePosition, cubeRotation, cubeScale;
+    glm::vec4 cubeColor;
 
     GLuint _cube;
     GLuint _vaoCube;
