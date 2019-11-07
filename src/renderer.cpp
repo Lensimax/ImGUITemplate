@@ -14,7 +14,6 @@ Renderer::Renderer(){
     shader = new Shader();
     shader->load("../data/shaders/display.vert", "../data/shaders/display.frag");
 
-    initGL();
 
     createCubeVAO();
 }
@@ -38,7 +37,7 @@ void Renderer::initGL(){
 
     // Cull triangles which normal is not towards the camera
     glDisable(GL_CULL_FACE);
-    glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
+    // glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
 }
 
 // display the UI
@@ -94,7 +93,10 @@ void Renderer::paintGL(int width, int height){
     const float far = 100.0f;
     glm::mat4 projMat = glm::perspective(fov, (float)width/(float)height, near, far);
 
+    initGL();
+
     glViewport(0,0,width,height);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glUseProgram(shader->id());
 
