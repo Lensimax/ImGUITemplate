@@ -80,6 +80,11 @@ void Renderer::paintGL(int width, int height){
     // COMPUTE MATRICES
     // model matrix
     glm::mat4 modelMat = glm::mat4(1);
+    modelMat = translate(modelMat, cubePosition);
+    modelMat = glm::scale(modelMat, cubeScale);
+    modelMat = glm::rotate(modelMat, cubeRotation[0], glm::vec3(1.0,0.0,0.0));
+    modelMat = glm::rotate(modelMat, cubeRotation[1], glm::vec3(0.0,1.0,0.0));
+    modelMat = glm::rotate(modelMat, cubeRotation[2], glm::vec3(0.0,0.0,1.0));
 
     // view matrix
     const glm::vec3 position = glm::vec3(0,0,5);
