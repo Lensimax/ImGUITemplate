@@ -120,7 +120,7 @@ void Renderer::paintGL(int width, int height){
 
 }
 
-
+// creation of the VAO for the cube
 void Renderer::createCubeVAO(){
     const GLfloat cubeData[] = {
         -1.0f,-1.0f,-1.0f, // triangle 1 : begin
@@ -171,13 +171,20 @@ void Renderer::createCubeVAO(){
     glEnableVertexAttribArray(0);
 }
 
+// delete the VAO
 void Renderer::deleteCubeVAO(){
     glDeleteBuffers(1,&_cube);
     glDeleteVertexArrays(1,&_vaoCube);
 }
 
+
+
+// method to draw the cube
 void Renderer::drawCube(){
+
+    const unsigned int numberOfTriangles = 12;
+
     glBindVertexArray(_vaoCube);
-    glDrawArrays(GL_TRIANGLES,0,12*3);
+    glDrawArrays(GL_TRIANGLES,0,numberOfTriangles*3);
     glBindVertexArray(0);    
 }
