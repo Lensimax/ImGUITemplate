@@ -8,7 +8,7 @@
 
 #### Description
 
-This is a template for a OpenGL project with ImGui using GLFW, GLAD, GLM librairies.
+This is a template for a OpenGL project with [ImGui](https://github.com/ocornut/imgui) using GLFW, GLAD, GLM librairies.
 
 
 ![ImGui Template Screen](screen.png)
