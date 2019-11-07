@@ -1,5 +1,6 @@
 #include "renderer.h"
 
+#include <imgui.h>
 
 Renderer::Renderer(){
 
@@ -42,6 +43,30 @@ void Renderer::initGL(){
 
 // display the UI
 void Renderer::createUI(){
+
+    const float lowestValue = -1000.0f;
+    const float highestValue = 1000.0f;
+
+    // format d'affichage
+    const char *format = "%.3f";
+
+    ImGui::Begin("Cube");
+
+    ImGui::Text("Transform");
+
+    ImGui::Text("Position: "); ImGui::SameLine();
+    ImGui::DragFloat3("##position", &cubePosition[0], 0.01f, lowestValue, highestValue, format);
+    ImGui::Text("Rotation: "); ImGui::SameLine();
+    ImGui::DragFloat3("##rotation", &cubeRotation[0], 0.01f, lowestValue, highestValue, format);
+    ImGui::Text("Scale: "); ImGui::SameLine();
+    ImGui::DragFloat3("##scale", &cubeScale[0], 0.005f, 0.0f, highestValue, format);
+
+    ImGui::Separator();
+    ImGui::Text("Color");
+    ImGui::Text("Color: "); ImGui::SameLine();
+    ImGui::ColorEdit4("##color", (float *)&cubeColor);
+
+    ImGui::End();
 
 }
 
