@@ -5,3 +5,6 @@
 [submodule "thirdparty/glad"]
 	path = thirdparty/glad
 	url = https://github.com/Dav1dde/glad.git
+[submodule "thirdparty/glm"]
+	path = thirdparty/glm
+	url = git@github.com:TheSpyGeek/glm_without_test.git
