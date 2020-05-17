@@ -25,12 +25,7 @@ add_subdirectory(thirdparty)
 #find_package(glfw)
 #find_package(imgui)
 
-# pour ajouter le fichier par défaut de ImGui
-configure_file(data/default_imgui.ini imgui.ini  COPYONLY)
-
-
 ###### BUILD OPTION #######
-#set(CMAKE_SH "CMAKE_SH-NOTFOUND")
 
 # BUILD TYPE = Debug | Release
 if( NOT CMAKE_BUILD_TYPE )
