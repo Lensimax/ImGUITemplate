@@ -1,1 +1,4 @@
 build/
+
+ImGuiTemplate.vcxproj.user
+.vs/
