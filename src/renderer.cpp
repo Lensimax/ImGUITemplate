@@ -94,9 +94,9 @@ void Renderer::paintGL(int width, int height){
 
     // projection matrix
     const float fov = 45.0f;
-    const float near = 0.1f;
-    const float far = 100.0f;
-    glm::mat4 projMat = glm::perspective(fov, (float)width/(float)height, near, far);
+    const float nearCam = 0.1f;
+    const float farCam = 100.0f;
+    glm::mat4 projMat = glm::perspective(fov, (float)width/(float)height, nearCam, farCam);
 
     initGL();
 
