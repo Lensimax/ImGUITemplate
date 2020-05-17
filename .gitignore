@@ -1,1 +1,5 @@
 build/
+ImGuiTemplate.vcxproj.user
+.vs/
+x64
+imgui.ini
