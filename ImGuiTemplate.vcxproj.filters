@@ -4,6 +4,9 @@
     <Filter Include="sources">
       <UniqueIdentifier>{efb09eab-2ba9-41fd-b551-c5afd5a3da5c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{b1ac9767-2ab3-492c-9fc9-c519660b977d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\shader.h">
@@ -22,6 +25,27 @@
     </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\glad\src\glad.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_widgets.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_impl_opengl3.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_draw.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_impl_glfw.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_demo.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui.cpp">
+      <Filter>lib</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
